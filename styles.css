@@ -1,0 +1,66 @@
+:root {
+    --soft-blue: #acb9df;
+    --dark-blue: #20268C;
+    --pink: #F23DB3;
+    --yellow: #F2A81D;
+    --white: #fff;
+    --w: calc(70vw / 6);
+    --h: calc(70vh / 4);
+}
+* {
+    transition: all 0.5s;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    -webkit-perspective: 1000;
+    /*min-height: 100vh;*/
+    background-image: url('https://cdn.pixabay.com/photo/2020/01/04/18/40/trees-4741364_960_720.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Sansita', sans-serif;
+}
+.area-tarjeta, 
+.tarjeta,
+.cara {
+    width: var(--w);
+    height: var(--h);
+    min-width: 100px;
+}
+.tarjeta {
+    position: relative;
+    transform-style: preserve-3d;
+}
+.area-tarjeta:hover .tarjeta {
+    transform: rotateY(180deg);
+}
+.cara {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    box-shadow: inset 0 0 0 5px var(--white);
+    border-radius: 10px;
+    font-size: 500%;
+    color: var(--white);
+}
+.trasera {
+    background-color: var(--pink);
+    transform: rotateY(180deg);
+}
+.superior {
+    background-color: var(--dark-blue);
+}
+.nuevo-juego {
+    background-color: var(--yellow);
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--white);
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
